@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   get 'tasks/:id', to: 'tasks#show', as: :task
   # Create the tasks in the database on submit of new task form
   post 'tasks', to: 'tasks#create'
+  # edit a specific task
+  get 'tasks/:id/edit', to: 'tasks#edit', as: :edit_task
+  # update in the database
+  patch 'tasks/:id', to: 'tasks#update'
+  #destroy
+  delete 'tasks/:id', to: 'tasks#destroy'
 end
